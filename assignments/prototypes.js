@@ -19,10 +19,10 @@ function GameObject(attributes) {
   this.createdAt = attributes.createdAt;
   this.name = attributes.name;
   this.dimensions = attributes.dimensions;
-};
+}
 GameObject.prototype.destroy = function () {
   return `${this.name} was removed from the game.`;
-};
+}
 /*
   === CharacterStats ===
   * healthPoints
@@ -32,11 +32,11 @@ GameObject.prototype.destroy = function () {
 function CharacterStats(stats) {
   GameObject.call(this, stats);
   this.healthPoints = stats.healthPoints;
-};
+}
 CharacterStats.prototype = Object.create(GameObject.prototype);
 CharacterStats.prototype.takeDamage = function () {
   return `${this.name} took damage.`;
-};
+}
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
   * team
@@ -49,7 +49,7 @@ CharacterStats.prototype.takeDamage = function () {
 CharacterStats.prototype = Object.create(GameObject.prototype)
 CharacterStats.prototype.takeDamage = function () {
   return '${this.name} took damage.'
-};
+}
 console.log(mage.takeDamage()); // Bruce took damage.
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
@@ -65,7 +65,7 @@ function Humanoid(human) {
 Humanoid.prototype = Object.create(CharacterStats.prototype);
 Humanoid.prototype.greet = function () {
   return `${this.name} offers a greeting in ${this.language}`;
-};
+}
 // Test you work by un-commenting these 3 objects and the list of console logs below:
 
   const mage = new Humanoid({
