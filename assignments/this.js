@@ -1,8 +1,8 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. 
-* 2. 
+* 1. feature inside function
+* 2. way to put objects/properties outside a function
 * 3. 
 * 4. 
 *
